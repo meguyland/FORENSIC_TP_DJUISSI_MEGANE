@@ -113,11 +113,18 @@ qui ne sont rien d'autre que **les nom de connexion**, **numéro d'utilisateur**
 
 ![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/pwd.png)
 
+- `ping 138.66.89.12`: cette commande qui je pense permet à l'attaquant surement de faire un ping vers la machine
+sur laquelle il compte exfiltrer les outils
+
 - `crontab -e` : qui permettra à l'attaquant d'exécuter automatiquement des scripts
+
 - `zip -r --password $(cat /tmp/mypassword) bosch_cyber_tools.zip /home/b0sch/bosch_cyber_tools`qu'il a utilisé 
 pour compresser un fichier, celui qui contenait tous les outils
+
 - `mkdir /opt/leak`: ensuite il crée ce dossier appelé **leack**
+
 - `mv bosch_cyber_tools.zip /opt/leak`: dans le but de déplacer le zip dans le dossier leak qu'il a créé
+
 - `rm /tmp/mypassword`: ensuite il termine avec cette commande qui lui permettra de supprimer le fichier contenant
 les password utilisés pour se connecter
 
