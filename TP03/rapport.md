@@ -60,3 +60,36 @@ l'on utilise lorsqu'on souhaite accéder à la page web du serveur depuis le nav
 
 **- 172.18.0.2** : associé à l'hote **bosch-cyber**
 
+
+# III- VERIFICATIONS
+
+## 1- Les commandes `w`et `who`
+
+Lorsqu’on pense avoir été piraté, la première étape consiste à vérifier que l'intrus n'est pas connecté 
+à notre système, nous pouvons y parvenir en utilisant les commandes `w` ou `who`, la première commande`w` 
+contenant des informations supplémentaires :
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/w.png)
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/who.png)
+
+nous constatons qu'il n'y a aucun utilisateur actuellement connecté à part nous avec l'adresse **172.18.0.1**
+
+## 2- La commande `last`
+
+Une autre façon de superviser l'activité des utilisateurs est à travers la commande "last" qui permet de 
+lire le fichier wtmp qui contient des informations sur l'accès au login, la source du login, l'heure 
+du login, avec des fonctionnalités pour améliorer les événements spécifiques du login :
+
+![alt text]()
+
+malheureusement, nous ne pouvons voir que nos différentes connexions a des horaires différentes 
+
+## 3- La commande `history`
+
+Puisque nous suspectons une activité malveillante de la part d'un utilisateur, nous pouvons vérifier 
+l'historique de Bash, Puisque notre utilisateur est le seul auquel nous avons accès, nous allons enquêter 
+et lancer l'historique des commandes comme dans l'exemple suivant  avec la commande `history` :
+
+![alt text]()
+
