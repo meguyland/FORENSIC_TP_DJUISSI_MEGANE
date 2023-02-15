@@ -30,7 +30,7 @@ Etant donné que le role de la machine n'a pas été définit dans la consigne, 
 cherché tout d'abord à connaitre son role. Notre étude nous révèle que le serveur est en effet 
 un serveur web tournant sur APACHE2.
 
-pour se faire, nous avons entré la commande 'cd /etc' puis nous avons fait un 'ls' pour lister
+pour se faire, nous avons entré la commande `cd /etc` puis nous avons fait un `ls` pour lister
 contenu comme vous pouvez le constater sur l’image ci-dessous
 
 ![alt text]()
