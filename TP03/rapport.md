@@ -34,4 +34,9 @@ pour se faire, nous avons entré la commande `cd /etc` puis nous avons fait un `
 contenu comme vous pouvez le constater sur l’image ci-dessous 
 
 ![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/apache.png)
+
+nous pouvons meme avoir accès au fichier de configuration html de la page web en tapant la commande
+`cd /var/www/html` puis `ls` qui nous a permis de lister les fichier et enfin ̀`cat index.html` pour
+afficher son contenu. comme vous le voyez sur cette image
+ 
 ![alt text]()
