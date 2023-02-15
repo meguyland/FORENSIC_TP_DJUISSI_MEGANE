@@ -31,7 +31,7 @@ cherché tout d'abord à connaitre son role. Notre étude nous révèle que le s
 un serveur web tournant sur APACHE2.
 
 pour se faire, nous avons entré la commande `cd /etc` puis nous avons fait un `ls` pour lister
-contenu comme vous pouvez le constater sur l’image ci-dessous
+contenu comme vous pouvez le constater sur l’image ci-dessous 
 
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/apache.png)
 ![alt text]()
-![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/T)
