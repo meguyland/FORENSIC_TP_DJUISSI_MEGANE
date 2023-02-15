@@ -81,7 +81,7 @@ Une autre façon de superviser l'activité des utilisateurs est à travers la co
 lire le fichier wtmp qui contient des informations sur l'accès au login, la source du login, l'heure 
 du login, avec des fonctionnalités pour améliorer les événements spécifiques du login :
 
-![alt text]()
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/last.png)
 
 malheureusement, nous ne pouvons voir que nos différentes connexions a des horaires différentes 
 
@@ -91,5 +91,43 @@ Puisque nous suspectons une activité malveillante de la part d'un utilisateur, 
 l'historique de Bash, Puisque notre utilisateur est le seul auquel nous avons accès, nous allons enquêter 
 et lancer l'historique des commandes comme dans l'exemple suivant  avec la commande `history` :
 
-![alt text]()
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/history.png)
 
+a partir de cette commande nous pouvons observer que les commandes tapées de la première à la 15e ligne
+n'ont pas été effectuées par nous. l'attaquant a donc utilisé ce compte pour exfiltrer les outils dont il 
+avait besoin.
+
+pour que cela soit plus compréhensible, nous allons passer à une explication des différentes commandes :
+
+- `id`: commande utilisée pour trouver les noms d'utilisateur et de groupe et les ID numériques 
+(UID ou ID de groupe)
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/id.png)
+
+- `cat etc/passwd` : Le fichier passwd définit dans /etc/ comprend 7 champs, séparés par le symbole « : ».
+qui ne sont rien d'autre que **les nom de connexion**, **numéro d'utilisateur** et **numéro de groupe**
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/passwd.png)
+
+- `pwd`: qui permet de nous situer sur notre chemin
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/pwd.png)
+
+- `crontab -e` : qui permettra à l'attaquant d'exécuter automatiquement des scripts
+- `zip -r --password $(cat /tmp/mypassword) bosch_cyber_tools.zip /home/b0sch/bosch_cyber_tools`qu'il a utilisé 
+pour compresser un fichier, celui qui contenait tous les outils
+- `mkdir /opt/leak`: ensuite il crée ce dossier appelé **leack**
+- `mv bosch_cyber_tools.zip /opt/leak`: dans le but de déplacer le zip dans le dossier leak qu'il a créé
+- `rm /tmp/mypassword`: ensuite il termine avec cette commande qui lui permettra de supprimer le fichier contenant
+les password utilisés pour se connecter
+
+
+pour voir le fichier zippé, il nous suffit d'accéder au dossier leak dans lequel l'attaquant l'a caché
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/leak.png)
+
+# CONCLUSION
+
+cette analyse avait pour but de nous permettre de voir quels étaient les fichiers que l'attaquant avait exfiltrés
+malheureusement, nous n'avons pas pu y arriver mais une étude du périmètre puis une vérification des logs nous a 
+permis de comprendre ou qu'il a crée un fichier compressé contenant les tools
