@@ -35,8 +35,28 @@ contenu comme vous pouvez le constater sur l’image ci-dessous
 
 ![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/apache.png)
 
+les fichiers et sous dossiers que ce dossier contient
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/apachelist.png)
+
 nous pouvons meme avoir accès au fichier de configuration html de la page web en tapant la commande
 `cd /var/www/html` puis `ls` qui nous a permis de lister les fichier et enfin ̀`cat index.html` pour
 afficher son contenu. comme vous le voyez sur cette image
  
-![alt text]()
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/pagesite.png)
+
+## 2- Adresses IP
+
+Pour connaitre les afifférentes adresses des différents hotes de la machine, nous avons accédé au 
+fichier hosts qui les contient en entrant les commandes `cat /etc/hosts`qui va aller dans le dossier
+**etc** reccuperer le fichier **hosts** et nous l'afficher avec la commande **cat**
+
+![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/hosts.png)
+
+Comme on peut le voir nous avons les adresses :
+
+**-127.0.0.1** : qui est tout simplement l'adresse associée au **localhost**. c'est cette adresse que
+l'on utilise lorsqu'on souhaite accéder à la page web du serveur depuis le navigateur
+
+**-172.18.0.2** : associé à l'hote **bosch-cyber**
+
