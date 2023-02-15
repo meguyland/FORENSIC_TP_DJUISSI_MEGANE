@@ -45,7 +45,7 @@ afficher son contenu. comme vous le voyez sur cette image
  
 ![alt text](https://github.com/meguyland/FORENSIC_TP_DJUISSI_MEGANE/blob/main/TP03/img/pagesite.png)
 
-## 2- Adresses IP
+## 2- Adresses IP et Hotes
 
 Pour connaitre les afifférentes adresses des différents hotes de la machine, nous avons accédé au 
 fichier hosts qui les contient en entrant les commandes `cat /etc/hosts`qui va aller dans le dossier
@@ -55,8 +55,8 @@ fichier hosts qui les contient en entrant les commandes `cat /etc/hosts`qui va a
 
 Comme on peut le voir nous avons les adresses :
 
-**-127.0.0.1** : qui est tout simplement l'adresse associée au **localhost**. c'est cette adresse que
+**- 127.0.0.1** : qui est tout simplement l'adresse associée au **localhost**. c'est cette adresse que
 l'on utilise lorsqu'on souhaite accéder à la page web du serveur depuis le navigateur
 
-**-172.18.0.2** : associé à l'hote **bosch-cyber**
+**- 172.18.0.2** : associé à l'hote **bosch-cyber**
 
